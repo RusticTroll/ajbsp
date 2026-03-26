@@ -113,6 +113,8 @@ build_result_e;
 namespace ajbsp
 {
 
+extern "C" {
+
 // set the build information.  must be done before anything else.
 void SetInfo(buildinfo_t *info);
 
@@ -139,6 +141,7 @@ const char *GetLevelName(int lev_idx);
 // BUILD_LumpOverflow if some limits were exceeded.
 build_result_e BuildLevel(int lev_idx);
 
+} // extern "C"
 
 }  // namespace ajbsp
 
